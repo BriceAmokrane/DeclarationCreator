@@ -67,5 +67,11 @@ public class Declaration {
 		this.contenu = contenu;
 	}
 
+	@Override
+	public String toString() {
+		return "Declaration [id=" + id + ", nomEmploye=" + nomEmploye + ", prenomEmploye=" + prenomEmploye + ", date="
+				+ date + ", intitule=" + intitule + ", contenu=" + contenu + "]";
+	}
+
 	
 }
