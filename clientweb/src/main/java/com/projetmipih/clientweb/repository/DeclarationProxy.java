@@ -42,7 +42,7 @@ public class DeclarationProxy {
 	    return response.getBody();
 	}
 	
-    public Declaration getDeclaration(int id) {
+    public Declaration getDeclaration(Long id) {
     	String baseApiUrl = "http://localhost:9000";
 		String getDeclarationUrl = baseApiUrl + "/declaration/" + id;
 
@@ -57,7 +57,7 @@ public class DeclarationProxy {
 		return response.getBody();
 	}
     
-    public void deleteDeclaration(int id) {
+    public void deleteDeclaration(Long id) {
     	String baseApiUrl = "http://localhost:9000";
 		String deleteDeclarationUrl = baseApiUrl + "/declarationdelete/" + id;
 		
