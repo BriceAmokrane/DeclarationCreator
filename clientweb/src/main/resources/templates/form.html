@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créateur de déclarations</title>
+    
+    <link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous">
+
+    <style>
+        body {
+	        padding-top: 50px;
+        }
+
+        .special {
+	        padding-top: 50px;
+        }
+</style>
+</head>
+<body>
+    <div class="container special">
+        <div>
+            <h2 class="h2">Création d'une déclaration</h2>
+        </div>
+        <div>
+        <form method="post" th:action="@{/saveDeclaration}" th:object="${declaration}">
+            <div class="form-group">
+                <label for="prenomEmploye">Prénom</label>
+                <input class="form-control" name="prenomEmploye" type="text" th:field="*{prenomEmploye}">
+            </div>
+            <div class="form-group">
+                <label for="nomEploye">Nom</label>
+                <input class="form-control" name="nomEmploye" type="text" th:field="*{nomEmploye}">
+            </div>
+            <div class="form-group">
+                <label for="intitule">Intitulé</label>
+                <input class="form-control" name="intitule" type="text" th:field="*{intitule}">
+            </div>
+            <div class="form-group">
+                <label for="contenu">Contenu</label>
+                <input class="form-control" name="contenu" type="text" th:field="*{contenu}">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Créer</button>
+            </div>
+    </div>
+    </div>
+</form>
+</body>
+</html>

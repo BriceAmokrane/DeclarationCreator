@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Declaration Creator</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous">
+
+<style>
+body {
+	padding-top: 50px;
+}
+
+.special {
+	padding-top: 50px;
+}
+</style>
+</head>
+<body>
+	<div class="container special">
+		<div>
+			<h2 class="h2">Vue détaillée de la déclaration</h2>
+			<table class="table table-striped">
+				<tbody>
+					<tr class="table-primary">
+						<td class="table-primary">Prenom Employe</td>
+						<td class="table-primary"><span th:text="${declarationavoir.prenomEmploye}">Prenom
+								Employe</span></td>
+					</tr>
+					<tr class="table-primary">
+						<td class="table-primary">Nom Employe</td>
+						<td class="table-primary"><span th:text="${declarationavoir.nomEmploye}">Nom
+								Employe</span></td>
+					</tr>
+					<tr class="table-primary">
+						<td class="table-primary">Date</td>
+						<td class="table-primary"><span th:text="${declarationavoir.date}">Date</span></td>
+					</tr>
+					<tr class="table-primary">
+						<td class="table-primary">Intitule</td>
+						<td class="table-primary"><span th:text="${declarationavoir.intitule}">Intitule</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<div>
+				<h3>Contenu</h3>
+				<span th:text="${declarationavoir.contenu}">Contenu de la
+					déclaration</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
