@@ -15,19 +15,19 @@ public class DeclarationService {
     @Autowired
     private DeclarationProxy employeeProxy;
 
-    public Declaration getEmployee(final int id) {
+    public Declaration getDeclaration(Long id) {
         return employeeProxy.getDeclaration(id);
     }
 
-    public Iterable<Declaration> getEmployees() {
+    public Iterable<Declaration> getDeclarations() {
         return employeeProxy.getDeclarations();
     }
 
-    public void deleteEmployee(final int id) {
+    public void deleteDeclaration(Long id) {
         employeeProxy.deleteDeclaration(id);;
     }
 
-     public Declaration saveEmployee(Declaration declaration) {
+     public Declaration saveDeclaration(Declaration declaration) {
         Declaration savedDeclaration;
 
         declaration.setNomEmploye(declaration.getNomEmploye().toUpperCase());
