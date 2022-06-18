@@ -21,3 +21,4 @@ Ajout(s) prévu(s) :
   - Complexification du formulaire / Ajouts de plus de champs
   - Connexion à une base de donnée postgreSQL
   - Hébergement du site et de l'api
+  - Création d'une interface graphique JavaFX
